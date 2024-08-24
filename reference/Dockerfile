@@ -1,9 +1,6 @@
 # Use the official Python 3.12 image as the base image
 FROM python:3.12
 
-# Set the working directory in the container
-WORKDIR /app
-
 # Copy the requirements file to the working directory
 COPY requirements.txt .
 
@@ -11,10 +8,13 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code to the working directory
-COPY . .
+COPY . ./src
+ENV PATH "$PATH:/src/scripts"
+RUN useradd -m -d /src -s /bin/bash app && chown -R app:app /src/* && chmod +x /src/scripts/*
 
-# Expose the port on which the FastAPI application will run
-EXPOSE 8000
+# Set the working directory in the container
+WORKDIR /src
+USER app
 
 # Start the FastAPI application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
