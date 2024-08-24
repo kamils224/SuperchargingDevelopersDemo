@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+import logging
 
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
@@ -6,6 +7,7 @@ from starlette.middleware.cors import CORSMiddleware
 from src.api.main import api_router
 from src.config import settings
 from src.database import init_db
+from src.models import User # noqa
 
 
 @asynccontextmanager

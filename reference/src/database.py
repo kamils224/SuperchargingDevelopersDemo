@@ -7,6 +7,7 @@ engine = create_engine(settings.DATABASE_URL)
 
 
 def init_db():
+    print("Creating database")
     SQLModel.metadata.create_all(engine)
 
 
