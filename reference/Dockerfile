@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code to the working directory
 COPY . ./src
 ENV PATH "$PATH:/src/scripts"
+ENV PYTHONDONTWRITEBYTECODE 1
 RUN useradd -m -d /src -s /bin/bash app && chown -R app:app /src/* && chmod +x /src/scripts/*
 
 # Set the working directory in the container

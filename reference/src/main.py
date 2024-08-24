@@ -1,13 +1,12 @@
 from contextlib import asynccontextmanager
-import logging
 
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from src.api.main import api_router
+from src.api import api_router
 from src.config import settings
 from src.database import init_db
-from src.models import User # noqa
+from src.models import * # noqa
 
 
 @asynccontextmanager
@@ -17,11 +16,6 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
 
 
 # Set all CORS enabled origins
