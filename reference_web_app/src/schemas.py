@@ -3,31 +3,11 @@ from pydantic import BaseModel
 
 
 class UserBase(BaseModel):
-    id: str
+    id: int
     email: str
-    hashed_password: str
 
     class Config:
-        orm_mode = True
-
-
-class Ingredient(BaseModel):
-    id: str
-    name: str
-    quantity: int
-    unit: str
-
-    class Config:
-        orm_mode = True
-
-
-class Recipe(BaseModel):
-    id: str
-    name: str
-    ingredients: List[Ingredient]
-
-    class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class CreateUser(BaseModel):
@@ -35,12 +15,31 @@ class CreateUser(BaseModel):
     password: str
 
 
-class CreateFoodRecipe(BaseModel):
+class IngredientBase(BaseModel):
+    id: int
     name: str
-    ingredients: List[str]
+    unit: str | None
+
+    class Config:
+        from_attributes = True
 
 
 class CreateIngredient(BaseModel):
     name: str
-    quantity: int
     unit: str
+
+
+class RecipeBase(BaseModel):
+    id: int
+    name: str
+    ingredients: List[IngredientBase]
+    user: UserBase | None
+
+    class Config:
+        from_attributes = True
+
+
+class CreateRecipe(BaseModel):
+    name: str
+    ingredient_ids: List[int]
+    user_id: int | None = None
