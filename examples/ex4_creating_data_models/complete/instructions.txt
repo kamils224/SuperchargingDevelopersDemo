@@ -1,0 +1,3 @@
+1. Generate a restaurant and a food model, restaurant can have a list of food (random_model.py)
+2. Generate a restaurant and a food model, restaurant can have a list of food (sqlalchemy_empty_file.py)
+3. Generate a restaurant and a food model, restaurant can have a list of food (sqlalchemy_model.py)

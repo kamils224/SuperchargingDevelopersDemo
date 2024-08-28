@@ -1,0 +1,14 @@
+# Fibonacci
+
+1. write def fibonacci and use autocomplete
+2. write recursive fibonacci
+3. write tests for both
+4. print everything in main
+
+
+# Restaurant
+
+0.
+1. write a comment # load food.json into a dataclass
+2. get autocompleted imports, if not write them 
+3. 

@@ -1,0 +1,11 @@
+Copilot chat and commands exercies.
+
+1. Open copilot chat and ask following questions:
+What ingredients do I need to prepare a hamburger?
+What ingredients do I need to prepare a hamburger? Save result in json list.
+How to prepare a hamburger?
+How to prepare a hamburger? Create a function for each step.
+
+2. Ask to create some boilerplate for, FastAPI or Flask.
+
+3. Import Fastapi and then ask for Flask boilerplate.

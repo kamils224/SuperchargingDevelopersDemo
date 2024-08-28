@@ -5,16 +5,21 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    working_dir: /src
+    volumes:
+      - .:/src
     ports:
       - 8000:8000
     depends_on:
       - db
 
   db:
-    image: postgres
+    image: postgres:16.4
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: reference
+    ports:
+      - '5432:5432'
     volumes:
       - ./data:/var/lib/postgresql/data
