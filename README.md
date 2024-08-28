@@ -1,5 +1,15 @@
 # SuperchargingDevelopersDemo
 
+## Introduction
+
+SuperchargingDevelopersDemo is a demonstration project designed to showcase the powerful features of GitHub Copilot. This project illustrates how Copilot can assist developers in generating code and providing helpful suggestions throughout the development process. By leveraging Copilot, developers can expect an enhanced coding experience and increased productivity.
+
+The project includes various examples and exercises to demonstrate Copilot's capabilities. It also provides a setup for running the application in Docker containers, managing database migrations, and formatting code using predefined scripts.
+
+Please note that this project is intended for presentation purposes only and may not have all functionalities working properly. Certain features may be incomplete or non-functional.
+
+This description was created by GitHub Copilot.
+
 ## Build and run containers
 ```
 docker-compose up -d --build
@@ -49,3 +59,5 @@ or a hash of the specific version.
 ```
 docker compose exec app downgrade -1  # or -2 or base or hash of the migration
 ```
+
+

@@ -1,0 +1,64 @@
+{
+    "food": [
+        {
+            "name": "Burger",
+            "price": 9.99,
+            "kcal": 500,
+            "is_vege": false
+        },
+        {
+            "name": "Salad",
+            "price": 7.99,
+            "kcal": 200,
+            "is_vege": true
+        },
+        {
+            "name": "Pizza",
+            "price": 12.99,
+            "kcal": 800,
+            "is_vege": false
+        },
+        {
+            "name": "Pasta",
+            "price": 10.99,
+            "kcal": 600,
+            "is_vege": true
+        },
+        {
+            "name": "Steak",
+            "price": 19.99,
+            "kcal": 900,
+            "is_vege": false
+        },
+        {
+            "name": "Sushi",
+            "price": 15.99,
+            "kcal": 400,
+            "is_vege": false
+        },
+        {
+            "name": "Soup",
+            "price": 6.99,
+            "kcal": 300,
+            "is_vege": true
+        },
+        {
+            "name": "Sandwich",
+            "price": 8.99,
+            "kcal": 400,
+            "is_vege": true
+        },
+        {
+            "name": "Fish and Chips",
+            "price": 14.99,
+            "kcal": 700,
+            "is_vege": false
+        },
+        {
+            "name": "Stir-Fry",
+            "price": 11.99,
+            "kcal": 500,
+            "is_vege": true
+        }
+    ]
+}
