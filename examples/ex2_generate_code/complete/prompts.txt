@@ -10,7 +10,7 @@
 
 1. write a comment # load food.json into a dataclass
 2. get autocompleted imports, if not write them 
-3. create create some filter functions
+3. create some filter functions
 4. wrap everything in Restaurant class
 5. continue prompting to fix & refactor 
 6. print results
