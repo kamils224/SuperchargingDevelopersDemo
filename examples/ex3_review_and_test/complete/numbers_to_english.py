@@ -60,6 +60,9 @@ def _handle_three_digits(num_text: str) -> str:
 
 
 def num_to_eng(n: int) -> str:
+    if n < 0:
+        raise ValueError("This function accepts only a positive integer between 0 and 999")
+    
     num_text = str(n)
     digits_count = len(num_text)
 
