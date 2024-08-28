@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Table
 from sqlalchemy.orm import relationship
 
 from src.database import Base
-from pydantic import BaseModel
 
 class User(Base):
     __tablename__ = 'user'

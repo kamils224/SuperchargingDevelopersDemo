@@ -1,5 +1,7 @@
 # SuperchargingDevelopersDemo
 
+**Created for PyCon 2024**
+
 ## Introduction
 
 SuperchargingDevelopersDemo is a demonstration project designed to showcase the powerful features of GitHub Copilot. This project illustrates how Copilot can assist developers in generating code and providing helpful suggestions throughout the development process. By leveraging Copilot, developers can expect an enhanced coding experience and increased productivity.
