@@ -39,15 +39,15 @@ dozens_dict = {
 
 
 def _handle_one_digit(num_text: str, skip_zero: bool = False) -> str:
-    # demo: remove this if
     if skip_zero and num_text == "0":
         return ""
-    return digits_dict[num_text]
+    else:
+        return digits_dict[num_text]
 
 
 def _handle_two_digits(num_text: str) -> str:
     if num_text[0] == "0":
-        return _handle_one_digit(num_text[1], skip_zero=True)
+        return _handle_one_digit(num_text[1], skip_zero=True).strip()
     elif num_text[0] == "1":
         return ten_to_nineteen_dict[num_text]
     else:
@@ -60,6 +60,9 @@ def _handle_three_digits(num_text: str) -> str:
 
 
 def num_to_eng(n: int) -> str:
+    if n < 0:
+        raise ValueError("This function accepts only a positive integer between 0 and 999")
+    
     num_text = str(n)
     digits_count = len(num_text)
 
