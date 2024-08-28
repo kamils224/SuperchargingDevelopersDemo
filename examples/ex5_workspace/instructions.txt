@@ -2,4 +2,4 @@
 1. Ask questions about workspace - in chat
 2. Ask where models/config/endpoints are located
 3. Try to generate some README based on project structure
-4. 
+4. Ask about security in config file? Create some hard-coded secret and ask again. Ask how to fix it. 
