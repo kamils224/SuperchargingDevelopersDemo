@@ -44,12 +44,14 @@ def _handle_one_digit(num_text: str) -> str:
 
 def _handle_two_digits(num_text: str) -> str:
     if num_text[0] == "0":
+        # handle the case when the second digit is 0
         if num_text[1] == "0":
             return ""
         return _handle_one_digit(num_text[1])
     elif num_text[0] == "1":
         return ten_to_nineteen_dict[num_text]
     else:
+        # handle the case when the second digit is 0
         if num_text[1] == "0":
             return dozens_dict[num_text[0]]
         return " ".join([dozens_dict[num_text[0]], _handle_one_digit(num_text[1])]).strip()
