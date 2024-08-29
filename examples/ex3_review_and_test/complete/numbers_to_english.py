@@ -38,25 +38,26 @@ dozens_dict = {
 }
 
 
-def _handle_one_digit(num_text: str, skip_zero: bool = False) -> str:
-    if skip_zero and num_text == "0":
-        return ""
+def _handle_one_digit(num_text: str) -> str:
     return digits_dict[num_text]
 
 
 def _handle_two_digits(num_text: str) -> str:
     if num_text[0] == "0":
-        return _handle_one_digit(num_text[1], skip_zero=True)
+        if num_text[1] == "0":
+            return ""
+        return _handle_one_digit(num_text[1])
     elif num_text[0] == "1":
         return ten_to_nineteen_dict[num_text]
     else:
-        print(num_text)
-        return " ".join([dozens_dict[num_text[0]], _handle_one_digit(num_text[1], skip_zero=True)]).strip()
+        if num_text[1] == "0":
+            return dozens_dict[num_text[0]]
+        return " ".join([dozens_dict[num_text[0]], _handle_one_digit(num_text[1])]).strip()
 
 
 def _handle_three_digits(num_text: str) -> str:
     hundred = "hundred"
-    return " ".join([_handle_one_digit(num_text[0], skip_zero=True), hundred, _handle_two_digits(num_text[1:])]).strip()
+    return " ".join([_handle_one_digit(num_text[0]), hundred, _handle_two_digits(num_text[1:])]).strip()
 
 
 def num_to_eng(n: int) -> str:
