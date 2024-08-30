@@ -8,3 +8,4 @@ How to prepare a hamburger? Create a function for each step.
 
 2. Ask to create some boilerplate for, FastAPI or Flask.
 
+3. Check commit message created by Copilot
