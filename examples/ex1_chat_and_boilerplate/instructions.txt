@@ -1,4 +1,4 @@
-Copilot chat and commands exercies.
+Copilot chat and commands exercises.
 
 1. Open copilot chat and ask following questions:
 What ingredients do I need to prepare a hamburger?
